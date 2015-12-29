@@ -1,0 +1,17 @@
+CC = gcc -g -pg
+
+main: main.o mytool1.o mytool2.o
+	$(CC) -o main main.o mytool1.o mytool2.o
+
+main.o: main.c mytool1.h mytool2.h 
+	$(CC) -c main.c -o main.o
+
+mytool1.o: mytool1.c mytool1.h
+	$(CC) -c mytool1.c -o mytool1.o
+
+mytool2.o: mytool2.c mytool2.h
+	$(CC) -c mytool2.c -o mytool2.o
+
+clean:
+	-rm *.o
+	-rm *~ 
