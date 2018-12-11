@@ -14,4 +14,3 @@ mytool2.o: mytool2.c mytool2.h
 
 clean:
 	-rm *.o
-	-rm *~ 

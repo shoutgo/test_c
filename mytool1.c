@@ -1,5 +1,6 @@
 /* mytool1.c */ 
 
+#include <stdio.h>
 #include "mytool1.h" 
 
 void mytool1_print(int m1, int m2, int div) { 
