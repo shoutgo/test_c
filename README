@@ -1,0 +1,23 @@
+# 代码格式化
+
+indent 可用
+
+gindent 可用
+brew install gnu-indent
+gindent -st -orig *.c
+gindent -st -kr *.c
+gindent -st -gnu *.c
+gindent -st -linux *.c
+
+# 调试
+
+lldb 可用
+
+gdb 暂不能用
+brew install gdb
+“钥匙串访问”中增加证书 gdb-cert
+sudo killall taskgated 未正确执行
+可打开“活动监视器”执行
+codesign -s gdb-cert /usr/local/bin/gdb
+codesign --remove-signature /usr/local/bin/gdb
+echo "set startup-with-shell off" > ~/.gdbinit 不起作用
